@@ -22,7 +22,20 @@ public class MainScreen {
         });
     }
 
-
+    public MainScreen() {
+        Admin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Administrator();
+            }
+        });
+        ItemManagement.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Manager();
+            }
+        });
+    }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
